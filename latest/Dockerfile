@@ -7,12 +7,12 @@ RUN apt-get update \
 
 # Add JRiver packages to apt-get
 RUN wget -q "http://dist.jriver.com/mediacenter@jriver.com.gpg.key" -O- | apt-key add - \
- && wget http://dist.jriver.com/latest/mediacenter/mediacenter21jessie.list -O \
-	/etc/apt/sources.list.d/mediacenter21.list
+ && wget http://dist.jriver.com/latest/mediacenter/mediacenter22jessie.list -O \
+	/etc/apt/sources.list.d/mediacenter22.list
 
 # Install JRiver and VNC
 RUN apt-get update && apt-get install -y \
-	mediacenter21 \
+	mediacenter22 \
 	openbox \
 	supervisor \
 	xvfb \

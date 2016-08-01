@@ -1,4 +1,4 @@
-# cassfras21/jrivermc:21-latest
+# cassfras21/jrivermc:22-latest
 
 ![](https://www.jriver.com/images/header/logo.png)
 
@@ -15,41 +15,41 @@
 
 You need to replace everything between <> with your own setup settings.
 
-# JRiver Media Center 21
+# JRiver Media Center 22
 
 ```
-docker pull cassfras21/jrivermc:21-latest
+docker pull cassfras21/jrivermc:22-latest
 ```
 
 ### Data container
 
 ```
 docker run \
---name=jrivermc21--data-container \
-cassfras21/jrivermc:21-latest \
-echo "Data-only container for JRiver Media Center 21"
+--name=jrivermc22--data-container \
+cassfras21/jrivermc:22-latest \
+echo "Data-only container for JRiver Media Center 22"
 ```
 
 ### App container (library only)
 
 ```
 docker run -d \
---name=jrivermc21 \
+--name=jrivermc22 \
 -e ENV_UPDATE=yes \
 -e ENV_VNCPASS=<vnc_password> \
 -h <hostname> \
 -p 5900:5900 \
 -p 52199:52199 \
---volumes-from jrivermc21--data-container \
+--volumes-from jrivermc22--data-container \
 -v <local_media_volume>:/mnt/media \
-cassfras21/jrivermc:21-latest
+cassfras21/jrivermc:22-latest
 ```
 
 ### App container (DLNA)
 
 ```
 docker run -d \
---name=jrivermc21 \
+--name=jrivermc22 \
 --net=host \
 --pid=host \
 -e ENV_UPDATE=yes \
@@ -59,27 +59,27 @@ docker run -d \
 -p 52101:52101 \
 -p 52199:52199 \
 -p 1900:1900/udp \
---volumes-from jrivermc21--data-container \
+--volumes-from jrivermc22--data-container \
 -v <local_media_volume>:/mnt/media \
-cassfras21/jrivermc:21-latest
+cassfras21/jrivermc:22-latest
 ```
 
 ### Data backup...
 
 ```
 docker run --rm \
---volumes-from jrivermc21--data-container \
+--volumes-from jrivermc22--data-container \
 -v <local_backup_folder>:/backup \
-cassfras21/jrivermc:21-latest \
-tar cvf /backup/backup_jrivermc21.tar --exclude 'home/jriver/.jriver/Media Center 21/Temp' /home/jriver/.jriver
+cassfras21/jrivermc:22-latest \
+tar cvf /backup/backup_jrivermc22.tar --exclude 'home/jriver/.jriver/Media Center 22/Temp' /home/jriver/.jriver
 ```
 
 ### Data restore...
 
 ```
 docker run --rm \
---volumes-from jrivermc21--data-container \
+--volumes-from jrivermc22--data-container \
 -v <local_backup_folder>:/backup \
-cassfras21/jrivermc:21-latest \
-tar xvf /backup/backup_jrivermc21.tar
+cassfras21/jrivermc:22-latest \
+tar xvf /backup/backup_jrivermc22.tar
 ```
