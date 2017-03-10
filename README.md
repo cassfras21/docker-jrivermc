@@ -32,7 +32,7 @@ docker run -d \
 --name=jrivermc22-latest \
 --net=host \
 --pid=host \
--e UPDATE=yes \
+-e UPDATE=no \
 -e VNCPASS=<vnc_password> \
 --volumes-from jrivermc22--data-container \
 -v <local_media_volume>:/mnt/media \
@@ -46,7 +46,7 @@ docker run -d \
 --name=jrivermc22-stable \
 --net=host \
 --pid=host \
--e UPDATE=yes \
+-e UPDATE=no \
 -e VNCPASS=<vnc_password> \
 --volumes-from jrivermc22--data-container \
 -v <local_media_volume>:/mnt/media \
