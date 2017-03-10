@@ -5,7 +5,7 @@
 [JRiver Media Center](https://www.jriver.com/) is a media manager and player providing high quality playback of audio and video. Its scope includes almost all formats of audio, video, and images. Media Center can also record television and manage documents. It also provides a media network to stream your media across multiple devices.
 
 ### Usage
-* Headless server only (no local rendering for audio or video) 
+* Headless server only (doesn't support audio/video local rendering) 
 * DLNA is supported
 * Easy data backup and restoration
 
