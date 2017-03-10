@@ -19,7 +19,7 @@ You need to replace everything between <> with your own setup settings.
 
 You need to run at least one app container. Data container is optional but recommended.
 
-# Data container (optional)
+## Data container (optional)
 
 ```
 docker run \
@@ -28,7 +28,7 @@ cassfras21/jrivermc \
 echo "Data-only container for JRiver Media Center 22"
 ```
 
-# App container (JRiver latest version)
+## App container (JRiver latest version)
 
 ```
 docker run -d \
@@ -42,7 +42,7 @@ docker run -d \
 cassfras21/jrivermc:latest
 ```
 
-# App container (JRiver stable version)
+## App container (JRiver stable version)
 
 ```
 docker run -d \
@@ -56,7 +56,7 @@ docker run -d \
 cassfras21/jrivermc:stable
 ```
 
-# To backup your data...
+### To backup your data...
 
 ```
 docker run --rm \
@@ -66,7 +66,7 @@ cassfras21/jrivermc \
 tar cvf /backup/backup_jrivermc22.tar --exclude 'home/jriver/.jriver/Media Center 22/Temp' /home/jriver/.jriver
 ```
 
-# To restore you data...
+### To restore you data...
 
 ```
 docker run --rm \
