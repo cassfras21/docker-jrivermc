@@ -6,7 +6,7 @@
 
 ### Usage
 * Headless server only (doesn't support audio/video local rendering) 
-* DLNA is supported
+* DLNA (server and controller) is supported
 * Easy data backup and restoration
 
 ### Options
