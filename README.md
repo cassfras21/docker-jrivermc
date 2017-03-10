@@ -56,7 +56,7 @@ docker run -d \
 cassfras21/jrivermc:stable
 ```
 
-### To backup your data...
+#### To backup your data...
 
 ```
 docker run --rm \
@@ -66,7 +66,7 @@ cassfras21/jrivermc \
 tar cvf /backup/backup_jrivermc22.tar --exclude 'home/jriver/.jriver/Media Center 22/Temp' /home/jriver/.jriver
 ```
 
-### To restore you data...
+#### To restore you data...
 
 ```
 docker run --rm \
