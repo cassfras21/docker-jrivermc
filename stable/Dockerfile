@@ -14,7 +14,7 @@ RUN apt-get update \
 
 # Install JRiver and other required apps
  && apt-get update \
- && apt-get install -y \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	mediacenter22 \
 	supervisor \
 	xserver-xorg-video-dummy \
