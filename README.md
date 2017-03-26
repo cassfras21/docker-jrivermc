@@ -13,7 +13,7 @@ Replace everything between <> with your own setup settings.
 * Easy data backup and restoration
 
 ### Options
-* MONITOR - Change the screen monitor used for environnement variable DISPLAY. Default value is :1 (optional)
+* MONITOR - Change the screen monitor used for environment variable DISPLAY. Default value is :1 (optional)
 * VNCPASS - VNC password is by default 'jriver' (optional)
 * UPDATE - If set to 'yes', JRiver will be updating at the container startup  (optional)
 
