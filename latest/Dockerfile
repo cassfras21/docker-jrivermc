@@ -2,6 +2,7 @@ FROM debian:jessie
 
 ENV UPDATE yes
 ENV VNCPASS jriver
+ENV MONITOR :1
 
 # Install wget
 RUN apt-get update \
